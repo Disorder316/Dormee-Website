@@ -443,15 +443,20 @@ $('a[href*=#]:not([href=#])').click(function() {
 	}); 
 
 	<!-- Modified close buttons on Modal to return to default after closing -->
-	$('button.close, button.dismiss').click(function(){
+	/* $('button.close, button.dismiss').click(function(){
 		$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/vKNLQFEzp4g" frameborder="0" allowfullscreen></iframe>')
-	});
-	function modalFunction() {
+	}); */
+	function checkModal() {
 		if($('#myModal').hasClass('in')) {
-			$('body').hide();
+			
+		} else {
+			$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/vKNLQFEzp4g" frameborder="0" allowfullscreen></iframe>')
 		}
 	}
-	modalFunction();
+	$('#myModal').click(function() {
+		checkModal();
+	});
+	
 	<!-- Makes Gallery Images Load in Modal Final -->
 	 $(".gallery-images img").click(function() {
 		$('#myModal').modal('show');
