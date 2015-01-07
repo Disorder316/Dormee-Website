@@ -228,11 +228,13 @@ label {
 /* The Modal Section */
 .modal-content {
 	top: 100px;
-	background:none;
+	background:#222;
 	border: none;
 	box-shadow:none;
 	}
-
+.modal-footer {
+	display:none;
+}
 /* The Footer Section */
 footer {
 	background-color: #ED1C24;
