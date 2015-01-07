@@ -15,13 +15,9 @@
 <body>
 
 <div id="top-level">
-	<!--	<div class="container">
-			<div class="row">
-				<img class="logo" src="img/top-level-logo.jpg">
-				<h1>DORMEE</h1>
-				<h3>IT CAME FROM THE 80's</h3>
-			</div>
-		</div>  -->
+
+	<img class="logo" src="img/top-level-1.jpg">
+				
 </div>
 <header>
 	<nav id="myAffix" class="navbar">
@@ -382,7 +378,7 @@
 				<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/vKNLQFEzp4g" frameborder="0" allowfullscreen></iframe>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default dismiss" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				<button type="button" class="btn btn-primary">Save changes</button>
 			  </div>
 			</div><!-- /.modal-content -->
@@ -446,10 +442,6 @@ $('a[href*=#]:not([href=#])').click(function() {
 		$('.modal-title').text("Dormee Music Videos");
 		$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/'+ this.id + '?autoplay=1" frameborder="0" allowfullscreen></iframe>')
 	}); 
-	
-	$('button.close, button.dismiss').click(function(){
-		$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/vKNLQFEzp4g" frameborder="0" allowfullscreen></iframe>')
-	});
 	/* $("img.gallerythumb").click(function() {
 		theImage = ($(this).attr('src'));
 		$('.modal-title').text("Dormee Gallery");

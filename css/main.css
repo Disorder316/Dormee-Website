@@ -94,14 +94,11 @@ section {
 
 /* Top Level Section */
 #top-level{
-	background-image: url("../img/top-level-1.jpg");
-	background-repeat: no-repeat;
-	padding: 200px 0px 250px;
-	margin-left: auto;
-	margin-right: auto;
-	background-position: center center;
-	height: 86%;
 	width: 100%;
+}
+#top-level img {
+	width:100%;
+	height: auto;
 }
 /* The Band Section*/
 .img-rounded {
