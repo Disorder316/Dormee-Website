@@ -382,7 +382,7 @@
 				<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/vKNLQFEzp4g" frameborder="0" allowfullscreen></iframe>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-default dismiss" data-dismiss="modal">Close</button>
 				<button type="button" class="btn btn-primary">Save changes</button>
 			  </div>
 			</div><!-- /.modal-content -->
@@ -446,6 +446,10 @@ $('a[href*=#]:not([href=#])').click(function() {
 		$('.modal-title').text("Dormee Music Videos");
 		$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/'+ this.id + '?autoplay=1" frameborder="0" allowfullscreen></iframe>')
 	}); 
+	
+	$('.close', '.dismiss').click(function(){
+		$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/vKNLQFEzp4g" frameborder="0" allowfullscreen></iframe>')
+	});
 	/* $("img.gallerythumb").click(function() {
 		theImage = ($(this).attr('src'));
 		$('.modal-title').text("Dormee Gallery");
