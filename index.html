@@ -426,8 +426,7 @@ $('a[href*=#]:not([href=#])').click(function() {
       }
     }
   });
-
-	
+  
 	<!-- Profile Script Final -->
 	$('#the-band img.img-rounded').hover(function(){
 		$('.thumb-1, .thumb-2, .thumb-3, .thumb-4').removeClass('active').addClass('hidden');
@@ -436,29 +435,37 @@ $('a[href*=#]:not([href=#])').click(function() {
 		$('.active').fadeIn('slow');
 	});
 	
-	
 	<!-- Youtube Modal Script Final -->
 	$('img.youtube').click(function() {
 		$('.modal-title').text("Dormee Music Videos");
 		$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/'+ this.id + '?autoplay=1" frameborder="0" allowfullscreen></iframe>')
+
 	}); 
-	/* $("img.gallerythumb").click(function() {
+
+	<!-- Modified close buttons on Modal to return to default after closing -->
+	$('button.close, button.dismiss').click(function(){
+		$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/vKNLQFEzp4g" frameborder="0" allowfullscreen></iframe>')
+	});
+	
+	<!-- Makes Gallery Images Load in Modal Final -->
+	 $(".gallery-images img").click(function() {
+		$('#myModal').modal('show');
 		theImage = ($(this).attr('src'));
 		$('.modal-title').text("Dormee Gallery");
-		$('.modal-iframe').replaceWith('<img src="' + theImage + ' "style="height: auto; width: 560px;"></img>');
-	});*/ 
-	
-
+		$('.modal-iframe').replaceWith('<img class="modal-iframe" src="' + theImage + ' "style="height: auto; width: 560px;"></img>');
+	}); 
 	
 	<!-- Navbar Fixed Script Final -->
 	// Selects ID to be affixed and calculates offset to adjust for screen height. 
 	$('#myAffix').affix({
         offset: { top: $('#myAffix').offset().top }
     });
+
 	//Selects the element being affixed and runs a function adding margin to fill the void after the Nav Fixes to the top.
 	$('nav').on('affix.bs.affix', function () {
 		$('#top-level').css('margin-top', '100px');
 	});
+
 	//Removes the added margin when the navbar re-enters the DOM.
 	$('nav').on('affix-top.bs.affix', function () {
 		$('#top-level').css('margin-top', '0px');
