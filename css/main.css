@@ -191,6 +191,9 @@ iframe {
 form {
 	text-align: left;
 }
+textarea {
+	color: black;
+}
 input, textarea {
 	width: 100%;
 	font-size: 14px;
