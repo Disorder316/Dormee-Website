@@ -442,10 +442,7 @@ $('a[href*=#]:not([href=#])').click(function() {
 
 	}); 
 
-	<!-- Modified close buttons on Modal to return to default after closing -->
-	/* $('button.close, button.dismiss').click(function(){
-		$('.modal-iframe').replaceWith('<iframe class="modal-iframe" width="560" height="315" src="//www.youtube.com/embed/vKNLQFEzp4g" frameborder="0" allowfullscreen></iframe>')
-	}); */
+	<!-- Checks to see if class in is active. If it's active do nothing. If it's inactive change youtube iframe autoplay to off. -->
 	function checkModal() {
 		if($('#myModal').hasClass('in')) {
 			
