@@ -458,11 +458,8 @@ $('a[href*=#]:not([href=#])').click(function() {
 	<!-- Navbar Fixed Script Final -->
 	// Selects ID to be affixed and calculates offset to adjust for screen height. 
 function newFunction(){
-	$(window).resize(function() {
-		var topOffset = $('#myAffix').offset().top;
-	});	
 	$('#myAffix').affix({
-        offset: { top: topOffset }
+        offset: { top: $('#myAffix').offset().top }
     });
 
 	//Selects the element being affixed and runs a function adding margin to fill the void after the Nav Fixes to the top.
@@ -476,7 +473,7 @@ function newFunction(){
 	});
 }
 newFunction();
-
+$( window ).resize(newFunction());	
 	
 });
 
